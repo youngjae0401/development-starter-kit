@@ -1,0 +1,40 @@
+spring:
+  profiles:
+    active: local
+  application:
+    name: development-starter-kit
+  threads:
+    virtual:
+      enabled: true
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+        default_batch_fetch_size: 100
+
+  data:
+    redis:
+      repositories:
+        enabled: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
