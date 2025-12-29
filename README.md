@@ -1,2 +1,1 @@
-# development-starter-kit
-개발 초기 설정
+# 개발 초기 설정 키트
